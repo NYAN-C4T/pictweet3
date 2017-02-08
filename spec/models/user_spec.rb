@@ -8,7 +8,7 @@ describe User do
     end
 
     it "is invalid without a password" do
-      user = User.new(nickname: "mockmock", email: "kkk@gmail.com", password: "", password_confirmation: "")
+      user = User.new(nickname: "foo", email: "kkk@gmail.com", password: "", password_confirmation: "")
       user.valid?
       expect(user.errors[:password]).to include("can't be blank")
     end
